@@ -808,29 +808,33 @@ p {
     @media (max-width: 750px) {
 
         body.resume-body {
-            height: auto !important;
-            min-height: 100vh;
-            overflow-y: scroll !important;
-            overflow-x: hidden !important;
+            height: 100vh !important;
+            overflow: hidden !important;
         }
 
         .resume-page {
-            height: auto !important;
-            min-height: 0 !important;
-            padding: 25px 15px 50px;
-
-            display: block;
+            height: calc(100vh - 60px) !important;
+            padding: 25px 15px 25px;
         }
 
         .resume-viewer {
             width: 100%;
-            height: 1200px;
+            height: calc(100vh - 130px);
 
-            flex: none;
+            flex: 1;
+            min-height: 0;
 
-            margin: 0 auto;
+            padding: 8px;
+
+            overflow: hidden;
         }
 
+        .resume-viewer iframe {
+            width: 100%;
+            height: 100%;
+
+            border: none;
+        }
     }
 }
 
